@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: pink;
+}
+header{
+        background-color:black;
+        height: 80px;
+        font-family: "Montserrat", serif;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 1000;
+}
+.menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.menu a{
+    color: pink;
+}
+.menu1 a:hover{
+    color:rgb(237, 121, 141);
+}
+.menu2 a:hover{
+    color:rgb(237, 121, 141);
+}
+.menu3 a:hover{
+    color:rgb(237, 121, 141);
+}
+.logo{
+    color: pink;
+}
+.logo:hover{
+    color:rgb(237, 121, 141);
+}
+.container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 150px;
+}
+.text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 90px;
+}
+.text2 h1{
+    color: rgb(232, 88, 112);
+}
+.text2 p:hover{
+color: rgb(240, 100, 124);
+}
+.text3 h1{
+    color: rgb(232, 88, 112);
+}
+.text3 p:hover{
+color: rgb(240, 100, 124);
+}
+.photos img{
+    transition: all 500ms ease;
+}
+.photos{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 2rem;
+    margin-top: 150px;
+   
+}
+.photos img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.container2 img{
+    transition: all 500ms ease;
+}
+.container2 img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.menu{
+    transition: all 500ms ease;
+}
+.menu:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .menu {
+        justify-content: center;
+        gap:10px
+    }
+    .container2 {
+        grid-template-columns: 1fr;
+        margin-top: 80px;
+    }
+    .photos {
+        grid-template-columns: 1fr;
+    }
+    .text {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+
+    .text2 h1, .text3 h1 {
+        font-size: 1.5rem;
+    }
+
+    .text2 p, .text3 p {
+        font-size: 0.9rem;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .container2 img {
+        width: 100%;
+    }
+    .photos img {
+        max-height: 500px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
